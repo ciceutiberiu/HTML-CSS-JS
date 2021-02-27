@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Shippori Mincho, "sans-serif";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #3c99dc;
+    overflow-x: hidden;
+}
+
+h1 {
+    margin: 20px;
+}
+
+.box {
+    background-color: #d5f3fe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 5px;
+    text-align: center;
+    border-radius: 7px;
+    height: 200px;
+    width: 400px;
+    transform: translateX(400%);
+    transition: transform 0.5s ease;
+}
+
+.box:nth-of-type(even) {
+    transform: translateX(-400%);
+}
+
+.box.active {
+    transform: translateX(0);
+}
